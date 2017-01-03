@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from InfiniteSkiesAPI.views import createDataList
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'', createDataList.as_view(), name='list_data'),
 ]
