@@ -8,7 +8,7 @@ from InfiniteSkiesAPI.models import data
 
 
 class createDataList(generics.ListCreateAPIView):
-    queryset = data.objects.all()
+    queryset = data.objects.all().extra(order_by=['-date'])
     serializer_class = DataSerializer
 
 
