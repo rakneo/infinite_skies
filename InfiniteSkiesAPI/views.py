@@ -1,3 +1,4 @@
+import django_filters
 from django.shortcuts import render
 from rest_framework import generics
 
@@ -9,3 +10,5 @@ from InfiniteSkiesAPI.models import data
 class createDataList(generics.ListCreateAPIView):
     queryset = data.objects.all()
     serializer_class = DataSerializer
+
+

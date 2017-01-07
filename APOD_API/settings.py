@@ -25,7 +25,7 @@ SECRET_KEY = 'rxe@02omh7^3l9x$xbs6-ea%x&xj6#ga_8s)_(hqw7+^g@if04'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.101']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'InfiniteSkiesAPI.apps.InfiniteskiesapiConfig',
     'django_extensions',
     'rest_framework',
+    'rest_framework.authtoken',
 
 ]
 
@@ -111,8 +112,22 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+#
+# REST_FRAMEWORK = {
+#    'DEFAULT_AUTHENTICATION_CLASSES': (
+#        'rest_framework.authentication.TokenAuthentication',
+#    ),
+#    'DEFAULT_PERMISSION_CLASSES': (
+#        'rest_framework.permissions.IsAuthenticated',
+#    )
+#}
+#
+
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
+
 
 LANGUAGE_CODE = 'en-us'
 
